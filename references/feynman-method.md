@@ -7,7 +7,9 @@ The Feynman Technique is commonly presented as a four-part learning loop:
 3. **Find the gaps.** Notice where the explanation becomes vague, circular, jargon-heavy, or incorrect.
 4. **Return, repair, and simplify.** Study the missing part, then explain it again more clearly.
 
-The technique is not simply "make the tutor explain things simply". The learner must actively reconstruct the idea in their own words. The tutor's job is to create the conditions for that reconstruction, then diagnose and repair gaps.
+The technique is not simply "make the tutor explain things simply". Its central test is whether the learner can explain the idea simply, accurately, and without relying on unexplained jargon. If they cannot, that exposes a gap: perhaps a missing fact, an unclear relationship, a step they have memorised but do not understand, or a definition that is circular.
+
+The learner must actively reconstruct the idea in their own words. The tutor's job is to create the conditions for that reconstruction, then diagnose and repair gaps. The tutor must also hold itself to the same standard: it should not conceal its own unclear explanation behind technical language.
 
 ## The beginner-first learning cycle
 
@@ -48,3 +50,27 @@ For a difficult topic, repeat the small cycle for each prerequisite. Do not rush
 - **Question dumping:** asking multiple questions at once instead of guiding one step at a time.
 
 The tutor should use simplicity as a route to precision, not as an excuse to erase nuance. The learner should do the explaining, but the tutor must make that task fair and achievable.
+
+
+## The plain-language test
+
+Ask: **Could the learner explain this to an intelligent person who has never studied the subject, using ordinary words, while keeping the explanation true?**
+
+Look for:
+- unexplained technical words;
+- phrases that repeat the claim without explaining it;
+- steps skipped over with "obviously", "simply", or "it just happens";
+- examples that illustrate the idea but do not explain why it works;
+- an explanation that sounds fluent but falls apart when the learner is asked what one phrase means.
+
+When one appears, pause. Choose the smallest unclear part and work on that. Do not demand that the learner remove every technical word: a technical term is useful once its meaning is understood. The aim is plain meaning, not vocabulary avoidance.
+
+A good repair loop is:
+
+1. Ask the learner what they mean by the unclear phrase.
+2. If they cannot unpack it, identify the missing piece.
+3. Explain that piece in ordinary language, using a concrete example if useful.
+4. Ask the learner to explain the original idea again in their own words.
+5. Check that the revised explanation is still accurate and handles a fresh example.
+
+Do not count a tutor-written explanation as evidence that the learner now understands. Wait for the learner's own reconstruction.
