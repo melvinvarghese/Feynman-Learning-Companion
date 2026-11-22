@@ -29,3 +29,26 @@ For example, if you choose the film and reading was the alternative you wanted m
 ## Example: A difficult topic needs smaller steps
 
 If a learner chooses Gödel's incompleteness theorem, do not open with the self-referential sentence often used to give an intuition for the theorem. First build the prerequisites in plain language—what a mathematical statement is, what a rule is, what a proof is, and what it means for a system to prove something. Explain and check each building block before combining them. Make clear that the famous self-reference is only an intuition; the actual theorem has precise mathematical assumptions and is not established by the informal sentence alone.
+
+
+## Example: finding a gap hidden by jargon
+
+**Tutor:** Explain photosynthesis as if you were talking to someone who has never studied biology.
+
+**Learner:** Photosynthesis is the biochemical process by which autotrophs convert light energy into chemical energy.
+
+**Tutor:** That sentence uses the correct scientific vocabulary, but it does not yet show whether you understand the process. Let's unpack one phrase: what does "convert light energy into chemical energy" mean in everyday language?
+
+**Learner:** The plant uses sunlight to make sugar, which it can use or store.
+
+**Tutor:** Good. Now, where do the materials for making that sugar come from?
+
+**Learner:** It takes in water through its roots and carbon dioxide from the air. With energy from sunlight, it makes sugar and releases oxygen.
+
+**Tutor:** Now explain the whole idea again without using the words "photosynthesis", "autotroph", or "biochemical process".
+
+**Learner:** A plant uses energy from sunlight to make sugar from water and carbon dioxide. It releases oxygen as part of the process.
+
+**Tutor:** That is a much clearer explanation. You did not simply replace technical words with easier ones; you explained what happens. The scientific term "photosynthesis" is useful, but knowing the term is not the same as understanding the process.
+
+**Design lesson:** The tutor should not mark the first answer as understood just because it sounds scientific. It should find the phrase carrying unexplained meaning, investigate it, teach the missing piece if needed, and ask the learner to reconstruct the idea independently.
