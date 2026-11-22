@@ -1,13 +1,13 @@
 # Assessment Framework
 
-Assess the explanation, not the learner's intelligence or worth.
+Assess the explanation, not the learner's intelligence or worth. Use this reference for a detailed review or mastery check; ordinary micro-checks can be handled conversationally.
 
 ## Dimensions
 
 | Dimension | Evidence of understanding |
 |---|---|
 | Accuracy | Claims are correct and not misleading |
-| Clarity | An intelligent beginner can follow the explanation without relying on unexplained jargon, circular definitions, or vague placeholders |
+| Clarity | An intelligent beginner can follow the explanation without unexplained jargon, circular definitions, or vague placeholders |
 | Completeness | Essential components are included |
 | Causal or logical structure | Relationships are explained, not merely listed |
 | Application | The learner can use the concept in a new example |
@@ -15,40 +15,35 @@ Assess the explanation, not the learner's intelligence or worth.
 
 ## The plain-language Feynman test
 
-Ask whether the learner can explain the central idea accurately in ordinary language. Technical terms are acceptable when the learner can explain what they mean and how they fit. The following are diagnostic signals, not reasons to shame or penalise the learner:
+Ask whether the learner can explain the central idea accurately in ordinary language. Technical terms are acceptable when the learner can explain what they mean and how they fit.
 
-- unexplained specialist words;
-- one unfamiliar term used to define another;
-- circular definitions;
-- vague phrases that conceal a missing mechanism;
-- examples with no explanation of why they illustrate the idea;
-- a fluent sentence that repeats a definition but does not explain it.
-
-When a signal appears, identify the exact phrase, uncover the missing idea, teach that piece, and ask the learner to reconstruct the explanation in their own words. A tutor-written rewrite is a teaching aid, not evidence that the learner now understands.
+Unexplained specialist words, circular definitions, vague phrases, and fluent sentences that merely repeat a definition are diagnostic signals—not reasons to shame or penalise the learner. Identify the exact phrase, uncover the missing idea, teach that piece, and ask the learner to reconstruct the explanation. A tutor-written rewrite is a teaching aid, not evidence of understanding.
 
 ## Feedback principles
 
 1. Begin with a specific strength.
 2. Name the most consequential gap.
-3. Explain why it matters.
+3. Explain briefly why it matters.
 4. Ask one question or provide one targeted correction.
 5. Invite a revised explanation.
 
-## Qualitative levels
+Use the three-part "What you understood / What needs work / Let's improve it" structure for substantial teach-backs. For a quick micro-check, use natural conversational feedback.
 
-- **Emerging:** recognises vocabulary but cannot explain the idea.
-- **Developing:** gives a partial explanation with important gaps.
-- **Sound:** explains the core accurately and handles a familiar example.
-- **Strong:** transfers the idea and explains its limits.
-- **Advanced:** compares models, tests assumptions, and handles unfamiliar cases.
+## Qualitative mastery levels
 
-Do not average these dimensions into a precise percentage unless the user explicitly requests a rubric-based score. Even then, explain that the score is an approximate instructional aid, not an objective measurement.
+- **Emerging:** Recognises vocabulary but cannot explain the central idea.
+- **Developing:** Gives a partial explanation with important gaps.
+- **Sound:** Explains the core accurately and handles a familiar example.
+- **Strong:** Transfers the idea to a new example and explains relevant limits.
+- **Advanced:** Compares models or accounts, tests assumptions, and handles unfamiliar cases.
+
+A learner may be stronger in one dimension than another. Describe the distinction rather than averaging dimensions into a misleading score. If a numeric rubric is explicitly requested, explain that it is an approximate instructional aid, not an objective measurement.
 
 ## Completion criteria
 
 A session can close when the learner can:
 - explain the central idea accurately in their own words;
 - provide or interpret an example;
-- answer at least one transfer or boundary question appropriate to the level.
+- answer a transfer or boundary question appropriate to their goal and level.
 
-For a very simple topic, fewer checks may be enough. For complex or high-stakes topics, explicitly state what remains untested.
+A very simple topic may need fewer checks. For complex or high-stakes topics, state what remains untested. A strong first explanation can justify moving quickly to transfer or nuance; do not require redundant beginner exercises.
