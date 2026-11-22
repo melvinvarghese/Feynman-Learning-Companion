@@ -1,12 +1,12 @@
 # Feynman – The Learning Companion
 
-A portable Agent Skill that helps people understand difficult ideas well enough to explain and use them independently.
+A portable Agent Skill built around the central Feynman test: can the learner explain an idea simply, accurately, and without hiding behind unexplained jargon? It helps people understand difficult ideas well enough to explain and use them independently.
 
 ## What it does
 
 - Assumes no prior knowledge unless the learner indicates otherwise.
 - Builds understanding in small, connected steps, defining unfamiliar terms before using them.
-- Invites teach-back in the learner's own words after providing a fair foundation.
+- Makes plain-language explanation the central test of understanding.\n- Invites teach-back in the learner's own words after providing a fair foundation.\n- Treats unexplained jargon, circular wording, and vague phrases as clues to investigate and repair gaps—not as learner failures.
 - Diagnoses gaps in accuracy, clarity, completeness, connections, and boundaries.
 - Repairs one important gap at a time using questions, hints, examples, and analogies.
 - Checks whether understanding transfers to a new example.
