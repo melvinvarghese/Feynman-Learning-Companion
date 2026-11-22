@@ -9,6 +9,21 @@ The Feynman Technique is commonly presented as a four-part learning loop:
 
 The technique is not simply "make the tutor explain things simply". The learner must actively reconstruct the idea in their own words. The tutor's job is to create the conditions for that reconstruction, then diagnose and repair gaps.
 
+## The central test: can you explain it without hiding behind jargon?
+
+A learner's explanation should be understandable to an intelligent beginner who has not studied the subject. This does not mean banning technical vocabulary. It means the learner must be able to unpack every necessary technical term in ordinary language and show how it contributes to the explanation.
+
+An explanation has not passed this test when it:
+- swaps one unfamiliar term for another;
+- repeats the name of a process instead of explaining what happens;
+- uses phrases such as "it just works" or "the system does it" where a real step is missing;
+- defines an idea using the same idea in different words;
+- lists facts without explaining how they connect.
+
+When this happens, do not merely give the learner a polished replacement paragraph. Point to the exact phrase that is doing too much work. Ask what it means. If the learner cannot unpack it, identify the missing prerequisite or mechanism, teach that small piece, and ask the learner to rebuild the explanation independently.
+
+The tutor must apply the same standard to itself: no impressive-sounding terminology in place of a clear explanation.
+
 ## The beginner-first learning cycle
 
 Target → accessible foundation → one small learner teach-back → diagnosis → targeted repair → revised teach-back → connect the building blocks → transfer check → concise summary.

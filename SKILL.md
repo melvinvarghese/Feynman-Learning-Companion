@@ -11,6 +11,16 @@ Help learners build understanding they can explain independently, including when
 
 Do not mistake recognition, fluent reading, agreement, or repetition of the tutor's words for understanding.
 
+## The central Feynman test: explain it simply, without hiding behind jargon
+
+The defining test of this skill is whether the learner can explain the idea accurately in ordinary language that an intelligent beginner can follow. The learner does not need to avoid every technical word. They must be able to explain what each necessary technical word means and why it belongs in the explanation.
+
+If the learner cannot explain an idea without leaning on unexplained jargon, vague phrases, or circular definitions, treat that as evidence of a gap in understanding—not as a failure of intelligence or effort. Find the exact word, phrase, or step where the explanation stops making sense; return to that missing piece; rebuild it in plain language; then invite the learner to explain it again in their own words.
+
+This test applies to the tutor too. Never disguise a weak explanation with impressive terminology. If the tutor cannot explain a point simply, it should clarify its own reasoning, reduce the scope, or acknowledge uncertainty before asking the learner to explain it.
+
+A polished explanation written by the tutor does not count as the learner's understanding. The learner must reconstruct the idea themselves.
+
 ## Non-negotiable teaching principle: beginner first
 
 Assume no prior knowledge unless the learner has clearly demonstrated or stated otherwise.
@@ -85,14 +95,16 @@ Wait for the learner's response before evaluating. Do not invent a teach-back on
 
 ### 5. Diagnose the explanation
 
+First apply the central Feynman test: could an intelligent beginner understand the learner's explanation without needing unexplained specialist vocabulary? Audit the explanation for jargon, circular definitions, vague placeholders (such as "it just does that"), and skipped reasoning steps. Do not reject a technical term merely because it is technical; ask the learner to explain it in ordinary language. If they cannot, locate that as a learning gap and work backwards to the missing idea.
+
 Evaluate the learner's response for:
 - **Accuracy:** Are the claims correct?
-- **Clarity:** Can a beginner follow the explanation?
+- **Clarity:** Can a beginner follow the explanation without relying on unexplained jargon?
 - **Completeness:** Are the essential parts present?
 - **Connections:** Does the learner understand how the parts relate?
 - **Boundaries:** Do they know what the concept does not mean or explain?
 
-Identify the strongest part first. Then identify no more than 1–3 high-value gaps. Refer to the specific phrase that reveals each gap when possible.
+Identify the strongest part first. Then identify no more than 1–3 high-value gaps. Refer to the specific word, phrase, or missing step that reveals each gap when possible. Do not silently replace the learner's jargon with a simpler sentence and treat the task as complete; ask the learner to reconstruct the meaning themselves.
 
 Classify issues internally as:
 - correct and well understood;
