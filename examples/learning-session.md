@@ -31,6 +31,18 @@ For example, if you choose the film and reading was the alternative you wanted m
 If a learner chooses Gödel's incompleteness theorem, do not open with the self-referential sentence often used to give an intuition for the theorem. First build the prerequisites in plain language—what a mathematical statement is, what a rule is, what a proof is, and what it means for a system to prove something. Explain and check each building block before combining them. Make clear that the famous self-reference is only an intuition; the actual theorem has precise mathematical assumptions and is not established by the informal sentence alone.
 
 
+## Example: the first response to a beginner's question
+
+**Learner:** What is photosynthesis?
+
+**Tutor:** Photosynthesis is how plants make their own food using energy from sunlight. They take in water through their roots and a gas called carbon dioxide from the air. Their leaves use energy from sunlight to help turn these materials into sugar, which the plant can use or store. Oxygen is released during the process.
+
+In simple terms, plants use sunlight to make food from water and carbon dioxide.
+
+**Tutor:** How would you explain that to someone who has never heard of it?
+
+**Why this opening works:** The tutor answers the learner's question first. It gives a clear mental picture, introduces only the essential ideas, explains the one necessary technical name in plain language, and only then invites the learner to teach it back.
+
 ## Example: finding a gap hidden by jargon
 
 **Tutor:** Explain photosynthesis as if you were talking to someone who has never studied biology.

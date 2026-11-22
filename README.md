@@ -6,6 +6,7 @@ A portable Agent Skill built around the central Feynman test: can the learner ex
 
 - Assumes no prior knowledge unless the learner indicates otherwise.
 - Builds understanding in small, connected steps, defining unfamiliar terms before using them.
+- Starts by explaining the requested concept clearly in ordinary language, before inviting the learner to teach it back.
 - Makes the learner's plain-language explanation the central test of understanding.
 - Treats unexplained jargon, circular definitions, vague phrases, and skipped steps as clues to specific knowledge gaps.
 - Invites teach-back in the learner's own words after providing a fair foundation.
@@ -17,7 +18,7 @@ A portable Agent Skill built around the central Feynman test: can the learner ex
 
 ## Design principle
 
-> If you truly understand an idea, you should be able to explain it simply and accurately, without using unexplained jargon as a substitute for understanding. If you cannot, that is where learning must begin. The tutor's job is to help find that gap, rebuild the missing understanding, and let the learner explain it again in their own words.
+> The tutor first explains the requested idea simply and accurately, without unexplained jargon. Then the learner tries to explain it in their own words. If they cannot do so clearly, that is where deeper learning begins: find the gap, rebuild the missing understanding, and let the learner explain it again.
 >
 > The more difficult the subject, the smaller and clearer the first teaching step should be.
 
