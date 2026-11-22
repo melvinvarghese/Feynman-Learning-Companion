@@ -7,11 +7,24 @@ Assess the explanation, not the learner's intelligence or worth.
 | Dimension | Evidence of understanding |
 |---|---|
 | Accuracy | Claims are correct and not misleading |
-| Clarity | A beginner can follow the explanation |
+| Clarity | An intelligent beginner can follow the explanation without relying on unexplained jargon, circular definitions, or vague placeholders |
 | Completeness | Essential components are included |
 | Causal or logical structure | Relationships are explained, not merely listed |
 | Application | The learner can use the concept in a new example |
 | Boundaries | The learner recognises limits, exceptions, or uncertainty |
+
+## The plain-language Feynman test
+
+Ask whether the learner can explain the central idea accurately in ordinary language. Technical terms are acceptable when the learner can explain what they mean and how they fit. The following are diagnostic signals, not reasons to shame or penalise the learner:
+
+- unexplained specialist words;
+- one unfamiliar term used to define another;
+- circular definitions;
+- vague phrases that conceal a missing mechanism;
+- examples with no explanation of why they illustrate the idea;
+- a fluent sentence that repeats a definition but does not explain it.
+
+When a signal appears, identify the exact phrase, uncover the missing idea, teach that piece, and ask the learner to reconstruct the explanation in their own words. A tutor-written rewrite is a teaching aid, not evidence that the learner now understands.
 
 ## Feedback principles
 
