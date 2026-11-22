@@ -12,12 +12,15 @@ Assess the explanation, not the learner's intelligence or worth. Use this refere
 | Causal or logical structure | Relationships are explained, not merely listed |
 | Application | The learner can use the concept in a new example |
 | Boundaries | The learner recognises limits, exceptions, or uncertainty |
+| Source fidelity (when using material) | The learner preserves the source's meaning and can distinguish it from outside clarification |
 
 ## The plain-language Feynman test
 
 Ask whether the learner can explain the central idea accurately in ordinary language. Technical terms are acceptable when the learner can explain what they mean and how they fit.
 
 Unexplained specialist words, circular definitions, vague phrases, and fluent sentences that merely repeat a definition are diagnostic signals—not reasons to shame or penalise the learner. Identify the exact phrase, uncover the missing idea, teach that piece, and ask the learner to reconstruct the explanation. A tutor-written rewrite is a teaching aid, not evidence of understanding.
+
+When a learner studies supplied material, also check whether their explanation accurately reflects the source. Do not penalise them for adding outside knowledge, but help them distinguish their additions from the author's claims.
 
 ## Feedback principles
 
@@ -44,6 +47,7 @@ A learner may be stronger in one dimension than another. Describe the distinctio
 A session can close when the learner can:
 - explain the central idea accurately in their own words;
 - provide or interpret an example;
-- answer a transfer or boundary question appropriate to their goal and level.
+- answer a transfer or boundary question appropriate to their goal and level;
+- when studying a source, preserve its central meaning and distinguish it from any tutor-added context.
 
 A very simple topic may need fewer checks. For complex or high-stakes topics, state what remains untested. A strong first explanation can justify moving quickly to transfer or nuance; do not require redundant beginner exercises.
