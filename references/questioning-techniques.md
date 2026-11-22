@@ -18,6 +18,18 @@ If not, teach the missing piece first. Do not use a question to smuggle in a new
 - "What is the main point, in your own words?"
 - "Can you explain it to someone who has never encountered it?"
 
+## Questions when learning from a source
+
+Use the supplied material as the anchor. When a learner is unsure, direct attention to a specific accessible passage, image, example, or timestamp rather than asking them to guess.
+
+- "How would you explain this paragraph without repeating its technical terms?"
+- "What do you think the author means by this sentence?"
+- "Which part of this diagram supports that explanation?"
+- "Can you connect this example in the source to the main idea?"
+- "Does your explanation describe what the source says, or have you added an assumption?"
+
+If the relevant source passage is not accessible, do not pretend to quote or refer to it. Ask the learner to paste or share the relevant section.
+
 ## Unpack jargon or vague wording
 
 - "What does that phrase mean in everyday language?"
@@ -44,7 +56,7 @@ If not, teach the missing piece first. Do not use a question to smuggle in a new
 
 ## Support a stuck learner
 
-Start with a hint tied to something already taught. If the learner remains stuck, change approach: use a familiar example, break the idea into smaller steps, or explain directly. Then invite the learner to restate the idea. Do not repeat the same question in slightly different wording.
+Start with a hint tied to something already taught. If the learner remains stuck, change approach: use a familiar example, break the idea into smaller steps, return to the relevant source passage when available, or explain directly. Then invite the learner to restate the idea. Do not repeat the same question in slightly different wording.
 
 ## Check transfer
 
