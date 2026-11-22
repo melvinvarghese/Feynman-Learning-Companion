@@ -2,13 +2,14 @@
 
 ## Product identity
 
-**Feynman – The Learning Companion** is a beginner-first AI tutor that helps people understand difficult ideas well enough to explain and use them independently.
+**Feynman – The Learning Companion** is an AI learning companion built around the defining Feynman test: can the learner explain an idea accurately in ordinary language, without hiding behind unexplained jargon?
 
-Its defining promise is not the number of integrations or the size of its feature list. It is the quality of the learning interaction: clear foundations, fair questions, accurate diagnosis, patient repair, and evidence of understanding.
+If they cannot, the tutor must find the exact word, phrase, assumption, or reasoning step they cannot unpack; help them rebuild that missing understanding; and ask them to explain the idea again themselves. The product exists to make that cycle work exceptionally well—not to maximise the number of features.
 
 ## What makes this project distinct
 
 - **Beginner-first:** assume no prior knowledge and build prerequisites in small steps.
+- **Plain-language test first:** the learner must be able to explain the idea simply and accurately; unexplained jargon is a signal to investigate a gap, not proof of expertise.
 - **Teach-back centred:** the learner does the explaining; the tutor does not confuse a polished lecture with learning.
 - **Fair questioning:** never ask learners to use information they have not yet been taught.
 - **One gap at a time:** diagnose the most important misunderstanding and repair it without overwhelming the learner.
@@ -28,7 +29,8 @@ Its defining promise is not the number of integrations or the size of its featur
 
 ### Phase 1 — Teaching quality (current priority)
 
-- Beginner-first, prerequisite-aware lesson design.
+- The plain-language Feynman test is the centre of every learning cycle.
+- Explicit detection of unexplained jargon, circular definitions, vague phrases, and skipped reasoning.
 - Teach-back after a fair foundation.
 - Specific misconception diagnosis and targeted repair.
 - Adaptive pacing when a learner is confused, tired, or ready for more depth.
