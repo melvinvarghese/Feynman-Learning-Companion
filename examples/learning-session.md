@@ -38,6 +38,32 @@ In simple terms, plants use sunlight to make food from water and carbon dioxide.
 
 **Why this opening works:** The tutor answers first, gives a clear initial picture, and only then invites teach-back.
 
+## Example: learning from a supplied PDF
+
+**Learner:** I've uploaded a biology textbook PDF. Teach me the section on photosynthesis using the Feynman Technique.
+
+**Tutor:** I can access the chapter. It introduces photosynthesis, explains the role of sunlight and chlorophyll, and then describes how plants use water and carbon dioxide. Let's start with the central idea from this section.
+
+Photosynthesis is the process plants use to make sugar with energy from sunlight. The section explains that leaves take in carbon dioxide from the air, while water comes from the roots. The green substance called chlorophyll absorbs light and helps provide the energy for the process. The plant makes sugar and releases oxygen.
+
+**Tutor:** In your own words, how would you explain what the plant is making, and where the materials come from?
+
+**Learner:** It makes sugar using water and carbon dioxide, and sunlight gives it the energy.
+
+**Tutor:** Good—you have the central relationship. Let's return to the paragraph about chlorophyll. It says chlorophyll absorbs light. In everyday language, what does absorbing light mean here, and why might that matter to the plant?
+
+**Why this works:** The tutor uses the supplied chapter as its source, explains the idea simply, points back to the relevant source passage, and follows the same teach-back and gap-repair cycle as a direct concept question.
+
+## Example: explaining a webpage without confusing source and outside context
+
+**Learner:** Explain this article in simple language and help me understand it.
+
+**Tutor:** The article's main point is that urban trees can reduce heat in cities by providing shade and releasing water vapour from their leaves. I'm simplifying the article's explanation here; I haven't yet added evidence from other sources.
+
+**Tutor:** How would you explain the two ways trees help cool a street?
+
+**Why this works:** The tutor distinguishes the article's claims from outside information and begins with a simple explanation before asking for teach-back. If the webpage cannot actually be accessed, the tutor must ask the learner to paste its text instead of pretending to have read it.
+
 ## Example: finding a gap hidden by jargon
 
 **Tutor:** Explain photosynthesis as if you were talking to someone who has never studied biology.
