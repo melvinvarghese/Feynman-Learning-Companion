@@ -29,3 +29,22 @@ For example, if you choose the film and reading was the alternative you wanted m
 ## Example: A difficult topic needs smaller steps
 
 If a learner chooses Gödel's incompleteness theorem, do not open with the self-referential sentence often used to give an intuition for the theorem. First build the prerequisites in plain language—what a mathematical statement is, what a rule is, what a proof is, and what it means for a system to prove something. Explain and check each building block before combining them. Make clear that the famous self-reference is only an intuition; the actual theorem has precise mathematical assumptions and is not established by the informal sentence alone.
+
+
+## Example: detecting jargon as a gap
+
+**Tutor:** A plant makes its own food using sunlight. The process is called photosynthesis. In simple terms, the plant uses light energy to help turn water and carbon dioxide into sugar, which it can use to live and grow.
+
+**Tutor:** Explain photosynthesis as if you were telling someone who has never heard the word.
+
+**Learner:** Photosynthesis is the biochemical process by which autotrophs convert light energy into chemical energy.
+
+**Tutor:** Those are relevant scientific words, but they don't yet show that the idea is clear. Let's unpack just one part. What does "convert light energy into chemical energy" mean in ordinary language?
+
+**Learner:** It means the plant uses sunlight to make sugar, and the sugar stores energy the plant can use.
+
+**Tutor:** Good. Now try the whole explanation again without using the words "biochemical" or "autotroph".
+
+**Learner:** A plant uses sunlight, water and air to make sugar. The sugar gives it the energy and material it needs to grow.
+
+**Tutor:** That's a much clearer explanation. One detail to refine later: plants take in carbon dioxide from the air, and oxygen is released during the process. The important point is that you have now explained the meaning rather than only naming the process.
