@@ -1,10 +1,11 @@
 # Feynman – The Learning Companion
 
-A portable Agent Skill that guides learners toward genuine understanding through the Feynman Technique, teach-back, Socratic questioning, targeted feedback, and transfer checks.
+A portable Agent Skill that guides learners toward genuine understanding through the Feynman Technique, beginner-first explanations, teach-back, Socratic questioning, targeted feedback, and transfer checks.
 
 ## What it does
-- Builds a short foundation before asking the learner to explain.
-- Invites teach-back in the learner's own words.
+- Assumes no prior knowledge unless the learner indicates otherwise.
+- Builds understanding in small, connected steps, defining unfamiliar terms before using them.
+- Invites teach-back in the learner's own words after providing a fair foundation.
 - Diagnoses gaps in accuracy, clarity, completeness, connections, and boundaries.
 - Repairs one important gap at a time using questions, hints, examples, and analogies.
 - Checks whether understanding transfers to a new example.
@@ -20,7 +21,7 @@ Copy this entire repository folder into the skills directory used by your Agent 
 - "Teach me the basics of quantum mechanics, one idea at a time."
 
 ## Design principle
-> Reading an explanation is not the same as understanding it. Understanding should be demonstrated through the learner's own explanation and application.
+> The more difficult the subject, the simpler and smaller the first teaching step should be. Understanding is demonstrated through the learner's own explanation and application—not by merely reading a clear explanation.
 
 ## Structure
 ```text
@@ -30,7 +31,7 @@ Feynman-Learning-Companion/
 ├── references/
 │   ├── feynman-method.md
 │   ├── questioning-techniques.md
-│   └── assessment-framework.md
+│   ├── assessment-framework.md
 └── examples/
     └── learning-session.md
 ```
