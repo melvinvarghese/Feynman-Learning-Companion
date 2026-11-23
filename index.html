@@ -21,26 +21,83 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareSourceCode",
-    "name": "Feynman – The Learning Companion",
-    "description": "An Agent Skill that guides AI assistants to teach concepts in plain language, support learning from supplied study material, invite learner teach-back, diagnose gaps, and test understanding using the Feynman Technique.",
-    "codeRepository": "https://github.com/melvinvarghese/Feynman-Learning-Companion",
-    "codeSampleType": "full",
-    "programmingLanguage": "Markdown",
-    "runtimePlatform": "Agent Skills-compatible AI assistants",
-    "author": {
-      "@type": "Person",
-      "name": "Melvin Varghese"
-    },
-    "keywords": [
-      "Feynman Technique",
-      "AI learning companion",
-      "teach-back",
-      "plain-language explanation",
-      "source-based learning",
-      "Agent Skill"
-    ],
-    "learningResourceType": "AI agent instruction skill"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://melvinvarghese.github.io/Feynman-Learning-Companion/#website",
+        "url": "https://melvinvarghese.github.io/Feynman-Learning-Companion/",
+        "name": "Feynman – The Learning Companion",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://melvinvarghese.github.io/Feynman-Learning-Companion/#webpage",
+        "url": "https://melvinvarghese.github.io/Feynman-Learning-Companion/",
+        "name": "Feynman Learning Companion – Learn Any Concept with the Feynman Technique",
+        "description": "An AI agent skill for learning concepts and studying supplied material through simple explanations, teach-back, and the Feynman Technique.",
+        "isPartOf": { "@id": "https://melvinvarghese.github.io/Feynman-Learning-Companion/#website" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Feynman – The Learning Companion",
+        "description": "An Agent Skill that guides AI assistants to teach concepts in plain language, support learning from supplied study material, invite learner teach-back, diagnose gaps, and test understanding using the Feynman Technique.",
+        "codeRepository": "https://github.com/melvinvarghese/Feynman-Learning-Companion",
+        "codeSampleType": "full",
+        "programmingLanguage": "Markdown",
+        "runtimePlatform": "Agent Skills-compatible AI assistants",
+        "author": {
+          "@type": "Person",
+          "name": "Melvin Varghese"
+        },
+        "keywords": [
+          "Feynman Technique",
+          "AI learning companion",
+          "teach-back",
+          "plain-language explanation",
+          "source-based learning",
+          "Agent Skill"
+        ],
+        "learningResourceType": "AI agent instruction skill"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Feynman Technique?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is a learning approach built around explaining an idea in simple language, noticing where the explanation breaks down, returning to the missing knowledge, and explaining it again."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the assistant explain before asking questions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. For a normal learning request, it first gives a beginner-friendly explanation and then invites the learner to teach it back. It can test first when the learner explicitly requests that."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I study from a PDF, book, webpage, video, or image?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The skill supports learning from these materials when the host AI agent can access and interpret them. File extraction, webpage browsing, video transcription, and image reading depend on the host agent's tools."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Feynman Learning Companion a standalone app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It is a portable set of instructions for compatible AI agents. It does not include its own AI model, chat interface, file-processing service, or persistent learner database."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
   <style>
