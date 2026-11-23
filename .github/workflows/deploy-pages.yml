@@ -7,7 +7,7 @@ on:
       - "index.html"
       - "styles.css"
       - "examples.js"
-      - "og-image.png"
+      - "og-image.webp"
       - "robots.txt"
       - "sitemap.xml"
       - "llms.txt"
