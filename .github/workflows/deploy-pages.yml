@@ -6,6 +6,7 @@ on:
     paths:
       - "index.html"
       - "styles.css"
+      - "examples.js"
       - "robots.txt"
       - "sitemap.xml"
       - "llms.txt"
