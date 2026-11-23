@@ -1,0 +1,40 @@
+# Feynman – The Learning Companion
+
+> An open-source Agent Skill that guides AI assistants to teach concepts in clear, beginner-friendly language and help learners build genuine understanding through the Feynman Technique.
+
+## Project summary
+
+Feynman – The Learning Companion supports two ways to begin learning, using one shared learning method.
+
+1. **Learn a concept:** A learner asks a question. The assistant explains the concept simply, defines unfamiliar terms, and then invites the learner to explain it back.
+2. **Learn from supplied material:** A learner provides a book, PDF, webpage, text, notes, video transcript, image, or diagram. When the host agent can access the material, the assistant uses it as the primary source, explains it in plain language, and follows the same teach-back and gap-repair cycle.
+
+## Core learning cycle
+
+Simple explanation → learner teach-back → identify gaps → targeted repair → independent reconstruction → transfer check.
+
+The central test is whether the learner can explain an idea accurately in ordinary language without hiding behind terms they cannot explain.
+
+## Important capabilities and limitations
+
+- This repository contains an Agent Skill, not a standalone chatbot or hosted file-processing application.
+- It does not include an AI model, chat interface, PDF parser, browser, OCR engine, video transcription service, or persistent learner database.
+- Actual access to PDFs, webpages, videos, and images depends on the tools available in the host AI agent.
+- The assistant must be transparent when a source cannot be accessed and must distinguish source claims from outside explanations.
+- A learner-written teach-back—not a tutor-generated summary—is the evidence used to assess understanding.
+
+## Primary resources
+
+- [Project website](https://melvinvarghese.github.io/Feynman-Learning-Companion/)
+- [GitHub repository](https://github.com/melvinvarghese/Feynman-Learning-Companion)
+- [Main skill instructions](https://github.com/melvinvarghese/Feynman-Learning-Companion/blob/main/SKILL.md)
+- [Feynman method guide](https://github.com/melvinvarghese/Feynman-Learning-Companion/blob/main/references/feynman-method.md)
+- [Questioning techniques](https://github.com/melvinvarghese/Feynman-Learning-Companion/blob/main/references/questioning-techniques.md)
+- [Assessment framework](https://github.com/melvinvarghese/Feynman-Learning-Companion/blob/main/references/assessment-framework.md)
+- [Learning session examples](https://github.com/melvinvarghese/Feynman-Learning-Companion/blob/main/examples/learning-session.md)
+- [Installation instructions](https://github.com/melvinvarghese/Feynman-Learning-Companion#install-the-skill)
+- [Issue tracker](https://github.com/melvinvarghese/Feynman-Learning-Companion/issues)
+
+## Topics
+
+Feynman Technique, AI learning companion, AI agent skill, plain-language explanations, teach-back learning, concept learning, source-based study, learning from PDFs, textbook study, active learning, understanding assessment, educational AI.
