@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feynman Learning Companion – Learn Any Concept with the Feynman Technique</title>
+  <meta name="description" content="An open-source AI agent skill for learning concepts and studying books, PDFs, webpages, videos, images and notes through simple explanations, teach-back and the Feynman Technique.">
+  <meta name="keywords" content="Feynman Technique, AI learning companion, AI tutor skill, learn with AI, plain language learning, teach-back method, study PDF with AI, learn from textbooks, concept learning, Agent Skills">
+  <meta name="author" content="Melvin Varghese">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://melvinvarghese.github.io/Feynman-Learning-Companion/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Feynman Learning Companion – Learn by Explaining">
+  <meta property="og:description" content="Understand concepts and study your own material with an AI learning skill built around simple explanations, teach-back and the Feynman Technique.">
+  <meta property="og:url" content="https://melvinvarghese.github.io/Feynman-Learning-Companion/">
+  <meta property="og:site_name" content="Feynman – The Learning Companion">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Feynman Learning Companion">
+  <meta name="twitter:description" content="An AI agent skill for genuine understanding through the Feynman Technique.">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Feynman – The Learning Companion",
+    "description": "An Agent Skill that guides AI assistants to teach concepts in plain language, support learning from supplied study material, invite learner teach-back, diagnose gaps, and test understanding using the Feynman Technique.",
+    "codeRepository": "https://github.com/melvinvarghese/Feynman-Learning-Companion",
+    "codeSampleType": "full",
+    "programmingLanguage": "Markdown",
+    "runtimePlatform": "Agent Skills-compatible AI assistants",
+    "author": {
+      "@type": "Person",
+      "name": "Melvin Varghese"
+    },
+    "keywords": [
+      "Feynman Technique",
+      "AI learning companion",
+      "teach-back",
+      "plain-language explanation",
+      "source-based learning",
+      "Agent Skill"
+    ],
+    "learningResourceType": "AI agent instruction skill"
+  }
+  </script>
+  <style>
+    :root { color-scheme: light; --ink:#17252b; --muted:#52636b; --paper:#fbfcfa; --panel:#fff; --line:#dce6e1; --accent:#176b61; --accent-soft:#e8f4ef; --warm:#f5eee3; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--accent); text-underline-offset:3px; }
+    a:hover { text-decoration-thickness:2px; }
+    .wrap { width:min(1080px, calc(100% - 40px)); margin:auto; }
+    header { padding:22px 0; border-bottom:1px solid var(--line); }
+    .nav { display:flex; justify-content:space-between; align-items:center; gap:18px; }
+    .brand { color:var(--ink); text-decoration:none; font-weight:750; letter-spacing:-.03em; }
+    .navlinks { display:flex; flex-wrap:wrap; gap:18px; font-size:.92rem; }
+    .navlinks a { text-decoration:none; color:var(--muted); }
+    .hero { padding:88px 0 74px; }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-size:.78rem; font-weight:750; }
+    h1 { max-width:850px; margin:14px 0 18px; font-size:clamp(2.5rem,7vw,5rem); line-height:1.04; letter-spacing:-.065em; }
+    .lead { max-width:760px; color:var(--muted); font-size:clamp(1.08rem,2vw,1.3rem); }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border-radius:999px; border:1px solid var(--accent); text-decoration:none; font-weight:700; }
+    .primary { color:white; background:var(--accent); }
+    .secondary { color:var(--accent); background:transparent; }
+    section { padding:58px 0; border-top:1px solid var(--line); }
+    h2 { margin:0 0 14px; font-size:clamp(1.8rem,4vw,2.6rem); letter-spacing:-.045em; line-height:1.15; }
+    h3 { margin:0 0 8px; font-size:1.18rem; }
+    p { margin:0 0 14px; }
+    .intro { max-width:760px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:26px; }
+    .card { padding:24px; background:var(--panel); border:1px solid var(--line); border-radius:18px; }
+    .tag { display:inline-block; margin-bottom:14px; padding:4px 10px; border-radius:999px; background:var(--accent-soft); color:var(--accent); font-size:.76rem; font-weight:750; }
+    .steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:26px; }
+    .step { padding:18px; border-radius:14px; background:var(--warm); }
+    .step b { display:block; margin-bottom:5px; }
+    ul { padding-left:1.25rem; }
+    li { margin:.35rem 0; }
+    .faq { max-width:820px; }
+    .faq-item { padding:18px 0; border-bottom:1px solid var(--line); }
+    .faq-item h3 { margin-bottom:7px; }
+    .cta { padding:30px; background:var(--accent-soft); border-radius:20px; }
+    footer { padding:30px 0 44px; color:var(--muted); font-size:.9rem; }
+    @media (max-width:700px) { .hero{padding:62px 0 52px}.grid,.steps{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.card{padding:20px} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="./">Feynman Learning Companion</a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#two-ways">Learning modes</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/melvinvarghese/Feynman-Learning-Companion">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" style="border:0">
+      <div class="wrap">
+        <div class="eyebrow">An open-source AI agent skill</div>
+        <h1>Learn it clearly.<br>Explain it simply.</h1>
+        <p class="lead">Feynman – The Learning Companion helps an AI assistant turn difficult ideas into understandable explanations, then checks whether you can explain those ideas in your own words. Learn from a question or from the books, PDFs, webpages, videos, images and notes you already use.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/melvinvarghese/Feynman-Learning-Companion">Explore the GitHub project</a>
+          <a class="button secondary" href="https://github.com/melvinvarghese/Feynman-Learning-Companion/blob/main/SKILL.md">Read the skill instructions</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="two-ways">
+      <div class="wrap">
+        <h2>Two ways to start learning</h2>
+        <p class="intro">Start with a question or bring your own learning material. Both paths use the same Feynman learning cycle: understand, explain, find gaps, rebuild, and apply.</p>
+        <div class="grid">
+          <article class="card">
+            <span class="tag">Mode 1</span>
+            <h3>Learn a concept</h3>
+            <p>Ask something like, “What is quantum physics? Explain it to a complete beginner.” The assistant gives a clear explanation first, defines unfamiliar terms, and uses examples before inviting you to teach the idea back.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Mode 2</span>
+            <h3>Learn from your material</h3>
+            <p>Bring a textbook, PDF, article, webpage, lecture transcript, notes, photograph, or diagram. The assistant explains the accessible source in plain language, keeps its meaning intact, and returns to relevant passages when repairing gaps.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="wrap">
+        <h2>The Feynman learning cycle</h2>
+        <p class="intro">The goal is not to memorise a polished answer. It is to build an explanation you can recreate and use independently.</p>
+        <div class="steps">
+          <div class="step"><b>01 · Understand</b>Start with a simple, accurate explanation.</div>
+          <div class="step"><b>02 · Teach back</b>Explain the idea in your own words.</div>
+          <div class="step"><b>03 · Find gaps</b>Spot jargon, vague wording, and missing steps.</div>
+          <div class="step"><b>04 · Rebuild</b>Repair one important gap at a time.</div>
+          <div class="step"><b>05 · Explain again</b>Reconstruct the idea independently.</div>
+          <div class="step"><b>06 · Apply</b>Test understanding with a new example.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap grid">
+        <div>
+          <h2>Built around genuine understanding</h2>
+          <p class="intro">A learner may recognise a term or repeat a definition without understanding what it means. This skill asks the assistant to notice that difference.</p>
+        </div>
+        <div class="card">
+          <ul>
+            <li>Beginner-friendly explanations before teach-back</li>
+            <li>Technical terms explained in ordinary language</li>
+            <li>Specific diagnosis instead of generic praise</li>
+            <li>One important knowledge gap repaired at a time</li>
+            <li>Adaptive pacing for beginners and advanced learners</li>
+            <li>Clear separation between source claims and outside context</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta">
+          <h2>Use it with your AI assistant</h2>
+          <p>This repository contains the instructions and supporting examples for an Agent Skills-compatible assistant. It is not a standalone chatbot or file-upload website. File reading, web access, video transcription, and image understanding depend on the tools provided by the AI agent you install it in.</p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/melvinvarghese/Feynman-Learning-Companion/archive/refs/heads/main.zip">Download the skill</a>
+            <a class="button secondary" href="https://github.com/melvinvarghese/Feynman-Learning-Companion#install-the-skill">Installation instructions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap faq">
+        <h2>Frequently asked questions</h2>
+        <article class="faq-item">
+          <h3>What is the Feynman Technique?</h3>
+          <p>It is a learning approach built around explaining an idea in simple language, noticing where the explanation breaks down, returning to the missing knowledge, and explaining it again. The aim is understanding, not merely repeating a definition.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Does the assistant explain before asking questions?</h3>
+          <p>Yes. For a normal learning request, it first gives a beginner-friendly explanation and then invites the learner to teach it back. It can test first when the learner explicitly requests that.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can I study from a PDF, book, webpage, video, or image?</h3>
+          <p>The skill supports learning from these materials when the host AI agent can access and interpret them. Video transcription, PDF extraction, webpage browsing, and image reading are capabilities of the host agent, not built into this instruction package.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Is Feynman Learning Companion a standalone app?</h3>
+          <p>No. It is a portable set of instructions for compatible AI agents. It does not include its own AI model, chat interface, file-processing service, or persistent learner database.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Where can I get the skill?</h3>
+          <p>The complete skill is available in the <a href="https://github.com/melvinvarghese/Feynman-Learning-Companion">public GitHub repository</a>. Download the repository and follow its installation instructions.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p><strong>Feynman – The Learning Companion</strong> · An AI agent skill for plain-language learning and teach-back.</p>
+      <p><a href="https://github.com/melvinvarghese/Feynman-Learning-Companion">GitHub repository</a> · <a href="llms.txt">LLM information</a> · <a href="sitemap.xml">Sitemap</a></p>
+      <p>Created by Melvin Varghese. The project does not claim affiliation with or endorsement by Richard Feynman or any AI provider.</p>
+    </div>
+  </footer>
+</body>
+</html>
