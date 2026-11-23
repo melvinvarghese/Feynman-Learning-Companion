@@ -1,32 +1,24 @@
-# Feynman Learning Companion — Visual Design Brief
+# Feynman website: Thinking Desk
 
-## Approved direction
-An intellectual journal meets a learning laboratory: editorial, curious, precise, and quietly experimental. The page should feel like entering a place devoted to thinking—not a generic AI product landing page.
+## Selected design
+The owner selected variation 1, The Thinking Desk. Use that composition as the reference: paper texture, dark green serif headline, a loose study sheet on the right, small illustrated entry points, and a connected five-stage learning cycle. Do not substitute a long editorial manifesto or a grid of bordered process cards.
 
-## Experience principles
-- Lead with an intellectually intriguing idea, not a product-marketing slogan.
-- Use editorial hierarchy: expressive serif display type paired with a highly legible sans-serif for navigation and interface text.
-- Use a warm, paper-like background, deep ink typography, and a restrained accent (oxidised teal or cobalt); avoid the generic SaaS gradient/card aesthetic.
-- Make diagrams, marginal notes, numbered annotations, and conceptual sketches the visual language.
-- Use deliberate asymmetry and generous whitespace while retaining a clear reading path.
-- Keep motion subtle and purposeful; respect reduced-motion preferences.
-- Mobile layout must remain readable, spacious, and easy to navigate.
+## Implementation
+- Static HTML with a local styles.css; no external font or framework dependency.
+- Hero: Understanding begins with your own words.
+- A layered, ruled study sheet with a pencil and a meaningful metal-versus-wood teach-back example. Text stays selectable and accessible.
+- Two illustrated entry points: Ask a question / Bring your material.
+- Five illustrated steps: Explain, Teach back, Find gaps, Rebuild, Apply. Returning to a gap and explaining again remains explicit.
+- Gravity example, installation links, host capability clarification, native FAQ disclosures, and project footer.
+- Keep existing metadata, structured data, repository links, and author attribution.
+- Mobile stacks the notebook, entry points, and examples. The learning cycle becomes a vertical list.
 
-## Page structure
-1. **Opening / thesis:** “Understanding begins when you can explain it.” An editorial opening with a large typographic statement, a short explanation, a compact “Explore the method” action, and a custom abstract learning-cycle illustration.
-2. **Two entry points:** Learn a concept / Learn from your material, presented as two clearly related starting points rather than generic feature cards.
-3. **The learning cycle:** A visually connected six-stage sequence: Understand → Teach back → Find gaps → Rebuild → Explain again → Apply.
-4. **A principle worth remembering:** Recognition is not understanding; the learner’s own reconstruction is the evidence.
-5. **Use the skill:** Clear explanation that this is an Agent Skill, with download and installation links and an honest note about host-agent capabilities.
-6. **FAQ and footer:** Retain factual FAQs, repository links, sitemap and llms.txt links, author attribution, and non-affiliation note.
+## Validation on 23 November 2026
+- Desktop browser visual review.
+- Mobile browser visual review at 390px; no horizontal document overflow.
+- Internal fragment destinations checked in the rendered document.
+- FAQ opened successfully in the mobile browser.
+- Git diff whitespace check.
 
-## Content and functional constraints
-- Preserve the distinction between the two entry modes and one shared learning method.
-- Do not imply this repository is a standalone chatbot, model, or file-processing service.
-- Preserve all accurate explanations of host-agent capability dependencies.
-- Keep canonical URL, metadata, Open Graph/Twitter metadata, JSON-LD, FAQ content, robots/sitemap/llms references, and GitHub destinations accurate.
-- No new JavaScript framework or dependency is needed; keep the site static and lightweight.
-- Do not change SKILL.md or learning behavior as part of this visual redesign.
-
-## Quality bar
-The result must not resemble a generic AI/SaaS template. It should have a distinctive editorial identity, a coherent visual motif, strong mobile typography, accessible contrast and focus states, semantic HTML, and no decorative element that obscures the learning message.
+## Delivery
+Changes are in index.html, styles.css, and the Pages workflow. The workflow watches styles.css so later style changes also deploy. Local preview is served on port 8765. No claim of remote deployment until the changes have been pushed and Pages has completed.
