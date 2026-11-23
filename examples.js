@@ -53,3 +53,46 @@
     localStorage.setItem(key + '-last', String(selected));
   } catch { /* A fresh random example still works without storage. */ }
 })();
+
+(() => {
+  const examples = [
+    ['Why does a wet shirt dry?', 'Water slowly leaves the shirt and goes into the air. A breeze carries that moisture away, so the shirt can dry faster.', 'Clear explanation! Why might the same shirt dry more slowly on a humid day?'],
+    ['Why does ice melt?', 'Heat moves from the warmer room into the ice. With enough heat, the solid ice turns into liquid water.', 'Good start! Why would an ice cube melt faster in warm water than in cold water?'],
+    ['Why do we see lightning first?', 'Light travels much faster than sound. The flash reaches my eyes before the thunder reaches my ears.', 'Nicely put! What would a longer delay tell you about how far away the storm is?'],
+    ['Why does a ball bounce?', 'The ball squashes when it hits the ground. As it springs back into shape, it pushes off the ground and moves upward.', 'Clear idea! Why does the ball usually bounce a little lower each time?'],
+    ['Why does a shadow form?', 'An object blocks some of the light. The darker area behind it is the shadow, where less light reaches the surface.', 'Good explanation! What happens to the shadow when you move the light?'],
+    ['What is a fraction?', 'If I cut a pizza into four equal pieces, each piece is one quarter. Eating three pieces means eating three quarters of that pizza.', 'Easy to follow! Why is it important that the four pieces are equal?'],
+    ['What does saving mean?', 'Saving means keeping some money instead of spending it now. That gives me money to use later.', 'Clear and simple! Can you give an example of something you might save for?'],
+    ['Why does a spoon feel cold?', 'The metal spoon takes heat from my warm hand quickly. That heat leaving my hand makes the spoon feel cold.', 'Good reasoning! Could a wooden spoon in the same room feel warmer at the same temperature?'],
+    ['What is a recipe?', 'A recipe is a set of instructions for making food. It tells me what I need and the steps to follow.', 'Nice explanation! Why might changing the order of the steps change the result?'],
+    ['What is a map?', 'A map is a smaller picture of a place. It shows where things are so I can find a route without seeing the whole place at once.', 'Clear example! Why can a map leave out some details and still be useful?'],
+    ['Why does a plant need light?', 'A plant uses energy from light to make sugars from water and carbon dioxide in the air. Those sugars help it grow.', 'Good start! What does the light provide, and where does the plant get its materials?'],
+    ['What is a fair test?', 'If I compare two plants, I should change just the thing I want to test. If I change their water and light together, I cannot tell which made the difference.', 'Well explained! What would you keep the same when testing how light affects growth?']
+  ];
+  const key = 'feynman-teachback-deck-v1';
+  let deck = [];
+  try {
+    const saved = JSON.parse(localStorage.getItem(key));
+    if (Array.isArray(saved) && saved.every(i => Number.isInteger(i) && i >= 0 && i < examples.length) && new Set(saved).size === saved.length) deck = saved;
+  } catch { /* Storage is optional. */ }
+  if (!deck.length) {
+    deck = examples.map((_, i) => i);
+    for (let i = deck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [deck[i], deck[j]] = [deck[j], deck[i]];
+    }
+    try {
+      const last = Number(localStorage.getItem(key + '-last'));
+      if (deck[deck.length - 1] === last) [deck[0], deck[deck.length - 1]] = [deck[deck.length - 1], deck[0]];
+    } catch { /* Storage is optional. */ }
+  }
+  const selected = deck.pop();
+  const [topic, explanation, feedback] = examples[selected];
+  document.querySelector('.teachback-topic').textContent = topic;
+  document.querySelector('.teachback p').textContent = explanation;
+  document.querySelector('.feedback p').textContent = feedback;
+  try {
+    localStorage.setItem(key, JSON.stringify(deck));
+    localStorage.setItem(key + '-last', String(selected));
+  } catch { /* A random example still works without storage. */ }
+})();

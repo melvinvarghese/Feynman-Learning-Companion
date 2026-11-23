@@ -227,3 +227,5 @@ footer { padding: 28px 0; border-top: 1px solid var(--line); font-size: 10px; co
 
 .paper-note .example-topic { font: 700 15px/1.4 var(--hand); white-space: normal; margin: 0 0 12px; letter-spacing: -.035em; color: var(--ink); }
 @media (max-width: 1000px) { .paper-note .example-topic { font-size: 13px; } }
+
+.teachback-topic { font: 700 14px/1.5 var(--hand); margin: 0 0 10px; letter-spacing: -.025em; }
