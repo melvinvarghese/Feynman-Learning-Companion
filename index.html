@@ -256,6 +256,52 @@
       *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
     }
 
+
+    .hero { background: radial-gradient(ellipse at 82% 52%, #e3dccb 0, transparent 52%); }
+    .hero-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(32px,5vw,70px); }
+    .hero h1 { font-size: clamp(3.4rem,6vw,5.9rem); }
+    .notebook { margin: 8px 10px 0 0; position: relative; min-width: 0; transform: rotate(2deg); }
+    .notebook::before { content: ""; position: absolute; inset: 7px -7px 38px 7px; background: #e7dfcc; border: 1px solid #cfc6b3; transform: rotate(-4deg); }
+    .notebook-page { position: relative; padding: 28px 30px 22px 46px; background: #fffdf6; border: 1px solid #ded7c7; box-shadow: 10px 18px 36px #463e2520; }
+    .notebook-page::before { content: ""; position: absolute; left: 30px; top: 0; bottom: 0; border-left: 1px solid #d9a49a77; }
+    .notebook-binding { position: absolute; left: -6px; top: 25px; bottom: 60px; width: 14px; z-index: 2; background: radial-gradient(ellipse at center, #6e6b5d 0 2px, transparent 3px) center top / 12px 28px repeat-y; }
+    .page-heading,.page-footer { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: .67rem; }
+    .page-heading { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .notebook h2 { font: 400 clamp(1.65rem,2.7vw,2.25rem)/1.13 var(--serif); letter-spacing: -.035em; margin: 20px 0; }
+    .paper-entry h3 { color: var(--accent); font: italic 1rem var(--serif); margin-bottom: 7px; }
+    .paper-entry p { font: 1rem/1.65 var(--serif); margin-bottom: 12px; }
+    .paper-entry .margin-note { color: var(--rust); font: italic .91rem/1.5 var(--serif); border-left: 2px solid #c58a6e; padding-left: 12px; }
+    .clearer { margin-top: 20px; }
+    .clearer strong { font-weight: 400; background: #e1ebd4; padding: 0 2px; }
+    .paper-question { display: flex; gap: 10px; border-top: 1px solid var(--line); padding-top: 12px; color: var(--accent-dark); }
+    .paper-question span { font-size: 1.5rem; }
+    .paper-question p { font: italic .9rem/1.5 var(--serif); }
+    .page-footer { align-items: center; }
+    .page-footer span:last-child { font: italic 1.4rem var(--serif); color: var(--accent); }
+    .notebook figcaption { position: relative; text-align: center; margin-top: 18px; color: var(--muted); font: italic .85rem/1.5 var(--serif); }
+    .navlinks a { display: inline-flex; min-height: 44px; align-items: center; }
+    @media (max-width: 960px) {
+      .nav { flex-wrap: wrap; gap: 4px; padding-top: 14px; }
+      .navlinks { flex-wrap: wrap; gap: 8px 20px; }
+      .hero-grid { gap: 28px; }
+      .notebook-page { padding: 22px 22px 20px 38px; }
+      .notebook-page::before { left: 25px; }
+    }
+    @media (max-width: 760px) {
+      .hero-grid { grid-template-columns: minmax(0,1fr); gap: 40px; }
+      .hero h1 { font-size: clamp(3.1rem,10vw,5rem); max-width: 620px; }
+      .notebook { width: calc(100% - 16px); max-width: 490px; margin: 0 auto; transform: rotate(1deg); }
+      .notebook h2 { font-size: clamp(1.7rem,6vw,2.25rem); }
+      .hero { padding-block: 44px 60px; }
+      .hero-note { align-items: baseline; }
+      .hero-note span { flex-shrink: 0; }
+    }
+    @media (max-width: 390px) {
+      .brand { font-size: .8rem; gap: 8px; }
+      .notebook-page { padding-right: 17px; }
+      .page-heading { font-size: .62rem; }
+      .hero h1 { font-size: 3rem; }
+    }
   </style>
 </head>
 
@@ -288,37 +334,24 @@
           </div>
           <div class="hero-note"><span aria-hidden="true"></span>An open instruction skill for compatible AI assistants</div>
         </div>
-        <figure class="cycle-figure" aria-label="An abstract diagram showing an idea moving through explanation, reflection, and clearer understanding">
-          <span class="figure-index">A small map of understanding · 01</span>
-          <svg viewBox="0 0 500 430" role="img" aria-label="A central idea connected to six stages of learning">
-            <defs>
-              <marker id="arrowhead" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
-                <path d="M0 0 L6 3 L0 6" fill="none" stroke="#176b62" stroke-width="1"/>
-              </marker>
-            </defs>
-            <ellipse cx="250" cy="216" rx="174" ry="132" fill="none" stroke="#aebbb0" stroke-width="1.2" stroke-dasharray="3 7" transform="rotate(-17 250 216)"/>
-            <path d="M116 129 C150 48 305 38 377 119 S414 288 326 344 S132 344 91 252 S84 160 116 129" fill="none" stroke="#176b62" stroke-width="1.6" marker-end="url(#arrowhead)"/>
-            <path d="M145 215 C168 163 204 145 250 145 C306 145 341 183 351 222 C358 274 309 300 258 300 C205 300 162 272 145 215Z" fill="#e1ebe5" stroke="#b6c8bd" stroke-width="1"/>
-            <circle cx="250" cy="215" r="54" fill="#f4f0e7" stroke="#176b62" stroke-width="1.5"/>
-            <text x="250" y="208" text-anchor="middle" fill="#202b2b" font-family="Georgia,serif" font-size="17" font-style="italic">the idea</text>
-            <text x="250" y="229" text-anchor="middle" fill="#66716d" font-family="system-ui,sans-serif" font-size="9" letter-spacing="1.4">MADE CLEAR</text>
-            <g fill="#f4f0e7" stroke="#176b62" stroke-width="1.4">
-              <circle cx="116" cy="129" r="17"/><circle cx="250" cy="75" r="17"/><circle cx="377" cy="119" r="17"/>
-              <circle cx="385" cy="286" r="17"/><circle cx="250" cy="355" r="17"/><circle cx="91" cy="252" r="17"/>
-            </g>
-            <g fill="#176b62" font-family="Georgia,serif" font-size="12" text-anchor="middle" font-style="italic">
-              <text x="116" y="133">1</text><text x="250" y="79">2</text><text x="377" y="123">3</text>
-              <text x="385" y="290">4</text><text x="250" y="359">5</text><text x="91" y="256">6</text>
-            </g>
-            <g fill="#66716d" font-family="system-ui,sans-serif" font-size="10">
-              <text x="74" y="101">notice</text><text x="268" y="49">explain</text><text x="400" y="105">question</text>
-              <text x="410" y="313">repair</text><text x="268" y="389">rebuild</text><text x="35" y="279">apply</text>
-            </g>
-            <path d="M56 354 l34 -9 12 15 -27 12Z" fill="none" stroke="#b85f43" stroke-width="1.2"/>
-            <path d="M411 58 l25 -9" stroke="#b85f43" stroke-width="1.4"/>
-            <circle cx="430" cy="52" r="3" fill="#b85f43"/>
-          </svg>
-          <figcaption class="figure-note">Understanding is not a destination. It is something you practise.</figcaption>
+        <figure class="notebook" aria-labelledby="notebook-title">
+          <div class="notebook-binding" aria-hidden="true"></div>
+          <div class="notebook-page">
+            <div class="page-heading"><span>A page from a learning session</span><span aria-hidden="true">01</span></div>
+            <h2 id="notebook-title">Why does metal<br>feel colder than wood?</h2>
+            <div class="paper-entry">
+              <h3>My first explanation</h3>
+              <p>“The spoon feels colder because metal is at a lower temperature.”</p>
+              <p class="margin-note">But what if both objects have been in the same room all night?</p>
+            </div>
+            <div class="paper-entry clearer">
+              <h3>A clearer explanation</h3>
+              <p>Both can be at the same room temperature. Metal carries heat away from my warm hand faster than wood does. That faster heat loss makes it <strong>feel colder.</strong></p>
+            </div>
+            <div class="paper-question"><span aria-hidden="true">↳</span><p>Try it yourself: why might a metal bench feel hotter than a wooden one on a hot day?</p></div>
+            <div class="page-footer"><span>Explain. Notice the gap. Try again.</span><span aria-hidden="true">f.</span></div>
+          </div>
+          <figcaption>A small example of how an explanation gets better.</figcaption>
         </figure>
       </div>
     </section>
@@ -446,6 +479,27 @@
       <p class="footer-note">Created by <a href="https://melvinvarghese.in/?utm_source=feynman_project&utm_medium=referral&utm_campaign=project_credit">Melvin Varghese</a>. This project does not claim affiliation with or endorsement by Richard Feynman or any AI provider.</p>
     </div>
   </footer>
+  <script>
+    (() => {
+      const examples = [["Why does metal feel colder than wood?", "The spoon feels colder because metal is at a lower temperature.", "But what if both objects have been in the same room all night?", "Both can be at the same room temperature. Metal carries heat away from my warm hand faster than wood does. That faster heat loss makes it feel colder.", "Why might a metal bench feel hotter than a wooden one on a hot day?"], ["Why does a huge ship float?", "Heavy things sink, so a ship must be made of something light.", "A steel nail sinks. How can a ship made of steel stay afloat?", "A ship’s hollow shape pushes aside a large volume of water. The water pushes upward. The ship floats when that upward force balances its weight.", "Why does crumpling an aluminium-foil boat into a tight ball make it more likely to sink?"], ["What is opportunity cost?", "It is the money I spend when I choose something.", "Can a choice have a cost even if I spend no money?", "If I spend an hour watching a film, I cannot use that same hour for a walk. Opportunity cost is the value of the best alternative I give up when I choose.", "What might be the opportunity cost of spending a free afternoon studying?"], ["Why do we have seasons?", "Summer happens when Earth is closer to the Sun.", "Then why is it summer in Australia when it is winter in Europe?", "Earth’s axis is tilted. When my hemisphere leans toward the Sun, sunlight hits more directly and the days are longer. That gives us summer. The other hemisphere has winter.", "Why does the hemisphere tilted away from the Sun receive less energy each day?"], ["How does a plant gain mass?", "A plant gets most of its mass from the soil.", "If that were true, would a tree leave a huge hole as it grew?", "Plants use sunlight to turn carbon dioxide and water into sugars. Much of the carbon in a tree’s dry mass came from the air. Soil supplies essential minerals, but not most of that mass.", "Why does a plant need air as well as water and healthy soil?"], ["Does a bigger sample prove a claim?", "If I ask enough people, my survey must be accurate.", "What if every person I ask belongs to the same club?", "A large sample can reduce random variation, but it can still be biased. To learn about a whole population, I need a way of choosing people that represents that population fairly.", "Would surveying only gym members tell you how often everyone in your town exercises?"], ["Why does a wet shirt dry?", "Water only turns into a gas when it boils.", "A shirt dries on the washing line without getting anywhere near boiling.", "Some water molecules at the surface have enough energy to escape into the air, even below boiling temperature. That is evaporation. Moving air carries water vapour away and usually helps the shirt dry faster.", "Why might the same shirt take longer to dry on a humid day?"], ["Is correlation the same as cause?", "When two things increase together, one must cause the other.", "Ice-cream sales and sunburn both rise in summer. Does ice cream cause sunburn?", "Two things can change together because a third thing affects both. Hot, sunny weather can increase ice-cream sales and sunburn. A pattern alone does not establish what causes what.", "What else would you investigate before saying that a study habit causes better grades?"], ["Why wear a seat belt?", "The belt stops me being thrown forward by a force when the car brakes.", "Does something need to push me forward, or am I already moving?", "My body is already moving with the car. When the car brakes, my body tends to keep moving. The seat belt applies a force that slows me down with the car.", "Why does a loose bag slide forward on a seat when a car stops suddenly?"], ["What does a computer algorithm do?", "An algorithm is a complicated formula only computers understand.", "Could instructions for sorting a pile of books count as an algorithm?", "An algorithm is a set of steps for completing a task. Sorting books by title is one example. A computer needs the steps stated precisely enough to carry them out.", "What instructions would you give someone to find the smallest number in a list?"], ["Why does the Moon change shape?", "Earth’s shadow covers a different part of the Moon each night.", "Why do lunar eclipses happen only occasionally, while phases repeat every month?", "The Sun always lights about half the Moon. As the Moon orbits Earth, we see different amounts of that sunlit half. Earth’s shadow causes a lunar eclipse, not the ordinary phases.", "At a full moon, how much of the Moon’s sunlit half can we see?"], ["What does an average tell us?", "The average is what a typical person in the group has.", "What happens to the average income if one billionaire joins a small group?", "The mean adds all the values and divides by how many there are. One unusually large value can pull it upward. The median, the middle value in order, can tell a different story about the same group.", "Which would help you understand typical house prices if a few houses cost far more than the rest?"]];
+      const storageKey = 'feynman-last-example';
+      let previous = -1;
+      try {
+        const saved = localStorage.getItem(storageKey);
+        if (saved !== null) previous = Number(saved);
+      } catch { /* Examples also work when browser storage is unavailable. */ }
+      const choices = examples.map((_, index) => index).filter(index => index !== previous);
+      const selected = choices[Math.floor(Math.random() * choices.length)];
+      const [title, first, gap, clearer, question] = examples[selected];
+      const paper = document.querySelector('.notebook');
+      paper.querySelector('h2').textContent = title;
+      paper.querySelector('.paper-entry p').textContent = '“' + first + '”';
+      paper.querySelector('.margin-note').textContent = gap;
+      paper.querySelector('.clearer p').textContent = clearer;
+      paper.querySelector('.paper-question p').textContent = 'Try it yourself: ' + question.charAt(0).toLowerCase() + question.slice(1);
+      try { localStorage.setItem(storageKey, String(selected)); } catch { /* Storage is optional. */ }
+    })();
+  </script>
 </body>
 
 </html>
