@@ -101,170 +101,351 @@
   }
   </script>
   <style>
-    :root { color-scheme: light; --ink:#17252b; --muted:#52636b; --paper:#fbfcfa; --panel:#fff; --line:#dce6e1; --accent:#176b61; --accent-soft:#e8f4ef; --warm:#f5eee3; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    a { color:var(--accent); text-underline-offset:3px; }
-    a:hover { text-decoration-thickness:2px; }
-    .wrap { width:min(1080px, calc(100% - 40px)); margin:auto; }
-    header { padding:22px 0; border-bottom:1px solid var(--line); }
-    .nav { display:flex; justify-content:space-between; align-items:center; gap:18px; }
-    .brand { color:var(--ink); text-decoration:none; font-weight:750; letter-spacing:-.03em; }
-    .navlinks { display:flex; flex-wrap:wrap; gap:18px; font-size:.92rem; }
-    .navlinks a { text-decoration:none; color:var(--muted); }
-    .hero { padding:88px 0 74px; }
-    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-size:.78rem; font-weight:750; }
-    h1 { max-width:850px; margin:14px 0 18px; font-size:clamp(2.5rem,7vw,5rem); line-height:1.04; letter-spacing:-.065em; }
-    .lead { max-width:760px; color:var(--muted); font-size:clamp(1.08rem,2vw,1.3rem); }
-    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
-    .button { display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border-radius:999px; border:1px solid var(--accent); text-decoration:none; font-weight:700; }
-    .primary { color:white; background:var(--accent); }
-    .secondary { color:var(--accent); background:transparent; }
-    section { padding:58px 0; border-top:1px solid var(--line); }
-    h2 { margin:0 0 14px; font-size:clamp(1.8rem,4vw,2.6rem); letter-spacing:-.045em; line-height:1.15; }
-    h3 { margin:0 0 8px; font-size:1.18rem; }
-    p { margin:0 0 14px; }
-    .intro { max-width:760px; color:var(--muted); }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:26px; }
-    .card { padding:24px; background:var(--panel); border:1px solid var(--line); border-radius:18px; }
-    .tag { display:inline-block; margin-bottom:14px; padding:4px 10px; border-radius:999px; background:var(--accent-soft); color:var(--accent); font-size:.76rem; font-weight:750; }
-    .steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:26px; }
-    .step { padding:18px; border-radius:14px; background:var(--warm); }
-    .step b { display:block; margin-bottom:5px; }
-    ul { padding-left:1.25rem; }
-    li { margin:.35rem 0; }
-    .faq { max-width:820px; }
-    .faq-item { padding:18px 0; border-bottom:1px solid var(--line); }
-    .faq-item h3 { margin-bottom:7px; }
-    .cta { padding:30px; background:var(--accent-soft); border-radius:20px; }
-    footer { padding:30px 0 44px; color:var(--muted); font-size:.9rem; }
-    @media (max-width:700px) { .hero{padding:62px 0 52px}.grid,.steps{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.card{padding:20px} }
+
+    :root {
+      color-scheme: light;
+      --paper: #f4f0e7;
+      --paper-deep: #eae4d8;
+      --ink: #202b2b;
+      --muted: #66716d;
+      --line: #d6d0c4;
+      --accent: #176b62;
+      --accent-dark: #10534d;
+      --accent-wash: #e1ebe5;
+      --rust: #b85f43;
+      --white: #fffdf8;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.7 var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent-dark); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--rust); outline-offset: 4px; border-radius: 2px; }
+    .wrap { width: min(1160px, calc(100% - 56px)); margin-inline: auto; }
+    .site-header { border-bottom: 1px solid var(--line); }
+    .nav { min-height: 78px; display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 720; letter-spacing: -.035em; }
+    .brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--accent); border-radius: 50%; color: var(--accent); font: italic 1.1rem var(--serif); }
+    .navlinks { display: flex; align-items: center; gap: clamp(16px, 3vw, 34px); font-size: .82rem; }
+    .navlinks a { color: var(--muted); text-decoration: none; }
+    .navlinks a:hover { color: var(--ink); }
+    .navlinks .nav-github { color: var(--accent-dark); border-bottom: 1px solid var(--accent); padding-bottom: 3px; }
+    .hero { padding: clamp(64px, 9vw, 118px) 0 90px; border: 0; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr); align-items: center; gap: clamp(34px, 6vw, 84px); }
+    .eyebrow, .section-kicker { display: flex; align-items: center; gap: 10px; color: var(--accent-dark); text-transform: uppercase; letter-spacing: .16em; font-size: .69rem; font-weight: 760; }
+    .eyebrow::before, .section-kicker::before { content: ""; width: 24px; height: 1px; background: var(--rust); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 760px; margin: 22px 0 22px; font: 400 clamp(3.6rem, 7.2vw, 6.8rem)/.98 var(--serif); letter-spacing: -.065em; }
+    h1 em { color: var(--accent); font-weight: 400; }
+    .hero-copy { max-width: 620px; color: var(--muted); font-size: clamp(1.02rem, 1.5vw, 1.16rem); line-height: 1.8; }
+    .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 30px; color: var(--muted); font-size: .78rem; }
+    .hero-note span { width: 7px; height: 7px; border-radius: 50%; background: var(--rust); }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 30px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 11px 18px; border: 1px solid var(--accent); color: var(--accent-dark); text-decoration: none; font-size: .83rem; font-weight: 700; transition: background .2s ease, color .2s ease, transform .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { background: var(--accent); color: var(--white); }
+    .button.primary:hover { background: var(--accent-dark); }
+    .button.text-link { border-color: transparent; padding-inline: 0; }
+    .cycle-figure { position: relative; min-height: 430px; display: grid; place-items: center; margin: 0; }
+    .cycle-figure::before { content: ""; position: absolute; inset: 8% 4%; border: 1px solid var(--line); border-radius: 50%; transform: rotate(-17deg) scaleY(.72); }
+    .cycle-figure::after { content: ""; position: absolute; width: 74%; height: 74%; border: 1px dashed #c9c1b3; border-radius: 50%; transform: rotate(23deg) scaleY(.76); }
+    .cycle-figure svg { position: relative; z-index: 1; width: 100%; max-width: 480px; overflow: visible; }
+    .figure-note { position: absolute; z-index: 2; right: 0; bottom: 22px; max-width: 150px; padding: 12px 14px; background: var(--paper); border-left: 2px solid var(--rust); color: var(--muted); font: italic .86rem/1.45 var(--serif); transform: rotate(-3deg); }
+    .figure-index { position: absolute; top: 20px; left: 4px; color: var(--rust); font: italic 1rem var(--serif); }
+    section { padding: clamp(64px, 8vw, 100px) 0; border-top: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 40px; align-items: start; margin-bottom: 42px; }
+    .section-kicker { padding-top: 10px; }
+    h2 { margin-bottom: 16px; font: 400 clamp(2.5rem, 4.7vw, 4.4rem)/1.04 var(--serif); letter-spacing: -.055em; }
+    h2 em { color: var(--accent); font-weight: 400; }
+    .section-intro { max-width: 650px; margin-bottom: 0; color: var(--muted); font-size: 1rem; }
+    .entry-paths { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+    .entry { position: relative; min-height: 250px; padding: 30px clamp(20px, 4vw, 54px) 34px 0; }
+    .entry + .entry { border-left: 1px solid var(--line); padding-left: clamp(20px, 4vw, 54px); }
+    .entry-number { display: block; margin-bottom: 28px; color: var(--rust); font: italic 1rem var(--serif); }
+    .entry h3 { margin-bottom: 12px; font: 400 clamp(1.8rem, 3vw, 2.45rem)/1.1 var(--serif); letter-spacing: -.035em; }
+    .entry p { max-width: 470px; margin-bottom: 20px; color: var(--muted); font-size: .94rem; }
+    .entry .entry-arrow { display: inline-block; color: var(--accent-dark); text-decoration: none; font-size: .8rem; font-weight: 720; }
+    .entry .entry-arrow span { padding-left: 8px; transition: padding .2s ease; }
+    .entry .entry-arrow:hover span { padding-left: 14px; }
+    .shared-note { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 18px; color: var(--accent-dark); font-size: .8rem; text-align: center; }
+    .shared-note::before, .shared-note::after { content: ""; width: min(70px, 12vw); height: 1px; background: var(--line); }
+    .cycle-section { background: var(--paper-deep); }
+    .cycle-track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #c9c1b3; border-left: 1px solid #c9c1b3; }
+    .cycle-step { min-height: 190px; padding: 22px 24px 26px; border-right: 1px solid #c9c1b3; border-bottom: 1px solid #c9c1b3; }
+    .cycle-step .step-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 26px; }
+    .cycle-step .step-no { color: var(--rust); font: italic 1rem var(--serif); }
+    .cycle-step .step-mark { width: 27px; height: 27px; border: 1px solid var(--accent); border-radius: 50%; color: var(--accent); display: grid; place-items: center; font-size: .7rem; }
+    .cycle-step h3 { margin-bottom: 8px; font: 400 1.55rem/1.15 var(--serif); }
+    .cycle-step p { max-width: 290px; margin-bottom: 0; color: var(--muted); font-size: .88rem; }
+    .principle { display: grid; grid-template-columns: .55fr 1.45fr; gap: 50px; align-items: start; }
+    .principle-index { color: var(--rust); font: italic 1.1rem var(--serif); }
+    .principle blockquote { margin: 0; }
+    .principle blockquote p { max-width: 850px; margin: 0 0 24px; font: 400 clamp(2.7rem, 5.6vw, 5.4rem)/1.03 var(--serif); letter-spacing: -.055em; }
+    .principle blockquote p em { color: var(--accent); }
+    .principle cite { display: block; max-width: 520px; color: var(--muted); font-size: .92rem; font-style: normal; }
+    .principle-aside { margin-top: 38px; padding: 17px 20px; border-left: 2px solid var(--rust); color: var(--muted); font: italic .95rem/1.55 var(--serif); }
+    .use-section { background: var(--ink); color: var(--paper); }
+    .use-section .section-kicker { color: #a9c9bf; }
+    .use-section h2 em { color: #a9c9bf; }
+    .use-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 70px; align-items: end; }
+    .use-copy { max-width: 650px; color: #c1cbc5; }
+    .use-copy strong { color: var(--paper); }
+    .use-aside { padding: 25px 0 4px 28px; border-left: 1px solid #52635e; }
+    .use-aside p { color: #c1cbc5; font-size: .88rem; }
+    .use-aside .button { border-color: #a9c9bf; color: var(--paper); }
+    .use-aside .button.primary { background: #a9c9bf; color: var(--ink); }
+    .use-aside .button.text-link { color: #d4e5dc; }
+    .faq { max-width: 880px; margin-left: auto; }
+    .faq-layout { display: grid; grid-template-columns: .65fr 1.35fr; gap: 60px; }
+    .faq-intro { color: var(--muted); font: italic 1.05rem/1.6 var(--serif); }
+    .faq-item { padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .faq-item:first-child { border-top: 1px solid var(--line); }
+    .faq-item summary { display: flex; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; font: 400 1.25rem/1.3 var(--serif); }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; color: var(--accent); font: 1.2rem var(--sans); }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-answer { max-width: 680px; padding: 14px 36px 0 0; color: var(--muted); font-size: .9rem; }
+    footer { padding: 32px 0 42px; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 30px; align-items: start; }
+    .footer-brand { color: var(--ink); font: 400 1.35rem var(--serif); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-links a { color: var(--muted); }
+    .footer-note { max-width: 620px; margin: 18px 0 0; }
+    @media (max-width: 820px) {
+      .hero-grid { grid-template-columns: 1fr  .85fr; gap: 20px; }
+      .cycle-figure { min-height: 340px; }
+      .section-head { grid-template-columns: 1fr; gap: 14px; }
+      .use-grid { gap: 34px; }
+      .faq-layout { gap: 32px; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 36px, 560px); }
+      .nav { min-height: auto; padding: 18px 0; align-items: flex-start; flex-direction: column; gap: 15px; }
+      .navlinks { width: 100%; gap: 18px; overflow-x: auto; padding: 2px 0 5px; white-space: nowrap; }
+      .hero { padding: 58px 0 58px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 22px; }
+      h1 { max-width: 540px; font-size: clamp(3.5rem, 15vw, 5.6rem); }
+      .hero-copy { max-width: 540px; }
+      .cycle-figure { min-height: 300px; max-width: 430px; width: 100%; margin: 0 auto; }
+      .figure-note { right: 2px; bottom: 4px; }
+      section { padding: 62px 0; }
+      .entry-paths { grid-template-columns: 1fr; }
+      .entry { min-height: auto; padding: 25px 0 30px; }
+      .entry + .entry { border-left: 0; border-top: 1px solid var(--line); padding: 25px 0 30px; }
+      .entry-number { margin-bottom: 16px; }
+      .cycle-track { grid-template-columns: 1fr 1fr; }
+      .cycle-step { min-height: 172px; padding: 18px 16px 20px; }
+      .principle { grid-template-columns: 1fr; gap: 20px; }
+      .principle blockquote p { font-size: clamp(2.8rem, 12vw, 4.2rem); }
+      .use-grid, .faq-layout { grid-template-columns: 1fr; gap: 24px; }
+      .use-aside { padding-left: 18px; }
+      .faq { margin-left: 0; }
+      .footer-row { flex-direction: column; }
+    }
+    @media (max-width: 390px) {
+      .wrap { width: calc(100% - 30px); }
+      .navlinks { gap: 14px; font-size: .76rem; }
+      .cycle-track { grid-template-columns: 1fr; }
+      .cycle-step { min-height: 0; }
+      .actions { align-items: flex-start; flex-direction: column; gap: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+
   </style>
 </head>
+
 <body>
-  <header>
+  <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="./">Feynman Learning Companion</a>
+      <a class="brand" href="./" aria-label="Feynman Learning Companion home">
+        <span class="brand-mark" aria-hidden="true">f</span>
+        <span>Feynman <span style="font-weight:400;color:var(--muted)">/ learning companion</span></span>
+      </a>
       <nav class="navlinks" aria-label="Main navigation">
-        <a href="#how-it-works">How it works</a>
-        <a href="#two-ways">Learning modes</a>
-        <a href="#faq">FAQ</a>
-        <a href="https://github.com/melvinvarghese/Feynman-Learning-Companion">GitHub</a>
+        <a href="#approaches">Start learning</a>
+        <a href="#method">The method</a>
+        <a href="#about">About the skill</a>
+        <a href="#faq">Questions</a>
+        <a class="nav-github" href="https://github.com/melvinvarghese/Feynman-Learning-Companion">GitHub ↗</a>
       </nav>
     </div>
   </header>
   <main>
-    <section class="hero" style="border:0">
-      <div class="wrap">
-        <div class="eyebrow">An open-source AI agent skill</div>
-        <h1>Learn it clearly.<br>Explain it simply.</h1>
-        <p class="lead">Feynman – The Learning Companion helps an AI assistant turn difficult ideas into understandable explanations, then checks whether you can explain those ideas in your own words. Learn from a question or from the books, PDFs, webpages, videos, images and notes you already use.</p>
-        <div class="actions">
-          <a class="button primary" href="https://github.com/melvinvarghese/Feynman-Learning-Companion">Explore the GitHub project</a>
-          <a class="button secondary" href="https://github.com/melvinvarghese/Feynman-Learning-Companion/blob/main/SKILL.md">Read the skill instructions</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="two-ways">
-      <div class="wrap">
-        <h2>Two ways to start learning</h2>
-        <p class="intro">Start with a question or bring your own learning material. Both paths use the same Feynman learning cycle: understand, explain, find gaps, rebuild, and apply.</p>
-        <div class="grid">
-          <article class="card">
-            <span class="tag">Mode 1</span>
-            <h3>Learn a concept</h3>
-            <p>Ask something like, “What is quantum physics? Explain it to a complete beginner.” The assistant gives a clear explanation first, defines unfamiliar terms, and uses examples before inviting you to teach the idea back.</p>
-          </article>
-          <article class="card">
-            <span class="tag">Mode 2</span>
-            <h3>Learn from your material</h3>
-            <p>Bring a textbook, PDF, article, webpage, lecture transcript, notes, photograph, or diagram. The assistant explains the accessible source in plain language, keeps its meaning intact, and returns to relevant passages when repairing gaps.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="how-it-works">
-      <div class="wrap">
-        <h2>The Feynman learning cycle</h2>
-        <p class="intro">The goal is not to memorise a polished answer. It is to build an explanation you can recreate and use independently.</p>
-        <div class="steps">
-          <div class="step"><b>01 · Understand</b>Start with a simple, accurate explanation.</div>
-          <div class="step"><b>02 · Teach back</b>Explain the idea in your own words.</div>
-          <div class="step"><b>03 · Find gaps</b>Spot jargon, vague wording, and missing steps.</div>
-          <div class="step"><b>04 · Rebuild</b>Repair one important gap at a time.</div>
-          <div class="step"><b>05 · Explain again</b>Reconstruct the idea independently.</div>
-          <div class="step"><b>06 · Apply</b>Test understanding with a new example.</div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap grid">
+    <section class="hero">
+      <div class="wrap hero-grid">
         <div>
-          <h2>Built around genuine understanding</h2>
-          <p class="intro">A learner may recognise a term or repeat a definition without understanding what it means. This skill asks the assistant to notice that difference.</p>
+          <div class="eyebrow">A practice in clear thinking</div>
+          <h1>Understanding begins when you can <em>explain it.</em></h1>
+          <p class="hero-copy">A good explanation is more than a neat arrangement of words. It is a way to find out what you understand, what you only recognise, and what you have yet to discover. Feynman helps an AI assistant guide that process.</p>
+          <div class="actions">
+            <a class="button primary" href="#method">Explore the method <span aria-hidden="true"> ↘</span></a>
+            <a class="button text-link" href="https://github.com/melvinvarghese/Feynman-Learning-Companion">Explore the project ↗</a>
+          </div>
+          <div class="hero-note"><span aria-hidden="true"></span>An open instruction skill for compatible AI assistants</div>
         </div>
-        <div class="card">
-          <ul>
-            <li>Beginner-friendly explanations before teach-back</li>
-            <li>Technical terms explained in ordinary language</li>
-            <li>Specific diagnosis instead of generic praise</li>
-            <li>One important knowledge gap repaired at a time</li>
-            <li>Adaptive pacing for beginners and advanced learners</li>
-            <li>Clear separation between source claims and outside context</li>
-          </ul>
-        </div>
+        <figure class="cycle-figure" aria-label="An abstract diagram showing an idea moving through explanation, reflection, and clearer understanding">
+          <span class="figure-index">A small map of understanding · 01</span>
+          <svg viewBox="0 0 500 430" role="img" aria-label="A central idea connected to six stages of learning">
+            <defs>
+              <marker id="arrowhead" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+                <path d="M0 0 L6 3 L0 6" fill="none" stroke="#176b62" stroke-width="1"/>
+              </marker>
+            </defs>
+            <ellipse cx="250" cy="216" rx="174" ry="132" fill="none" stroke="#aebbb0" stroke-width="1.2" stroke-dasharray="3 7" transform="rotate(-17 250 216)"/>
+            <path d="M116 129 C150 48 305 38 377 119 S414 288 326 344 S132 344 91 252 S84 160 116 129" fill="none" stroke="#176b62" stroke-width="1.6" marker-end="url(#arrowhead)"/>
+            <path d="M145 215 C168 163 204 145 250 145 C306 145 341 183 351 222 C358 274 309 300 258 300 C205 300 162 272 145 215Z" fill="#e1ebe5" stroke="#b6c8bd" stroke-width="1"/>
+            <circle cx="250" cy="215" r="54" fill="#f4f0e7" stroke="#176b62" stroke-width="1.5"/>
+            <text x="250" y="208" text-anchor="middle" fill="#202b2b" font-family="Georgia,serif" font-size="17" font-style="italic">the idea</text>
+            <text x="250" y="229" text-anchor="middle" fill="#66716d" font-family="system-ui,sans-serif" font-size="9" letter-spacing="1.4">MADE CLEAR</text>
+            <g fill="#f4f0e7" stroke="#176b62" stroke-width="1.4">
+              <circle cx="116" cy="129" r="17"/><circle cx="250" cy="75" r="17"/><circle cx="377" cy="119" r="17"/>
+              <circle cx="385" cy="286" r="17"/><circle cx="250" cy="355" r="17"/><circle cx="91" cy="252" r="17"/>
+            </g>
+            <g fill="#176b62" font-family="Georgia,serif" font-size="12" text-anchor="middle" font-style="italic">
+              <text x="116" y="133">1</text><text x="250" y="79">2</text><text x="377" y="123">3</text>
+              <text x="385" y="290">4</text><text x="250" y="359">5</text><text x="91" y="256">6</text>
+            </g>
+            <g fill="#66716d" font-family="system-ui,sans-serif" font-size="10">
+              <text x="74" y="101">notice</text><text x="268" y="49">explain</text><text x="400" y="105">question</text>
+              <text x="410" y="313">repair</text><text x="268" y="389">rebuild</text><text x="35" y="279">apply</text>
+            </g>
+            <path d="M56 354 l34 -9 12 15 -27 12Z" fill="none" stroke="#b85f43" stroke-width="1.2"/>
+            <path d="M411 58 l25 -9" stroke="#b85f43" stroke-width="1.4"/>
+            <circle cx="430" cy="52" r="3" fill="#b85f43"/>
+          </svg>
+          <figcaption class="figure-note">Understanding is not a destination. It is something you practise.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section>
+    <section id="approaches">
       <div class="wrap">
-        <div class="cta">
-          <h2>Use it with your AI assistant</h2>
-          <p>This repository contains the instructions and supporting examples for an Agent Skills-compatible assistant. It is not a standalone chatbot or file-upload website. File reading, web access, video transcription, and image understanding depend on the tools provided by the AI agent you install it in.</p>
-          <div class="actions">
-            <a class="button primary" href="https://github.com/melvinvarghese/Feynman-Learning-Companion/archive/refs/heads/main.zip">Download the skill</a>
-            <a class="button secondary" href="https://github.com/melvinvarghese/Feynman-Learning-Companion#install-the-skill">Installation instructions</a>
+        <div class="section-head">
+          <div class="section-kicker">Two ways in / one method</div>
+          <div>
+            <h2>Begin with a question.<br>Or bring <em>what you're reading.</em></h2>
+            <p class="section-intro">Learning can start with a subject you are curious about or with material already on your desk. Both approaches lead into the same cycle of explaining, testing, and rebuilding understanding.</p>
           </div>
         </div>
+        <div class="entry-paths">
+          <article class="entry">
+            <span class="entry-number">01 / Start with curiosity</span>
+            <h3>Learn a concept</h3>
+            <p>Ask about quantum physics, opportunity cost, the structure of a cell, or an idea you have never quite understood. The assistant begins with a clear explanation, introduces unfamiliar terms, and uses examples before inviting you to explain it back.</p>
+            <a class="entry-arrow" href="https://github.com/melvinvarghese/Feynman-Learning-Companion/blob/main/SKILL.md">See how concept learning works <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="entry">
+            <span class="entry-number">02 / Start with a source</span>
+            <h3>Learn from your material</h3>
+            <p>Bring a textbook, PDF, article, webpage, lecture transcript, notes, photograph, or diagram. The assistant works from accessible material, preserves its meaning, and returns to relevant passages when repairing gaps.</p>
+            <a class="entry-arrow" href="https://github.com/melvinvarghese/Feynman-Learning-Companion#install-the-skill">Explore source-based learning <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <div class="shared-note">Different starting points. The same discipline of understanding.</div>
+      </div>
+    </section>
+
+    <section id="method" class="cycle-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">The learning cycle / 02</div>
+          <div>
+            <h2>Make the idea simple.<br>Then make it <em>yours.</em></h2>
+            <p class="section-intro">The aim is not to memorise a polished answer. It is to build an explanation you can recreate, question, and use independently.</p>
+          </div>
+        </div>
+        <div class="cycle-track">
+          <article class="cycle-step"><div class="step-top"><span class="step-no">01</span><span class="step-mark" aria-hidden="true">↘</span></div><h3>Understand</h3><p>Start with a simple, accurate explanation of the central idea.</p></article>
+          <article class="cycle-step"><div class="step-top"><span class="step-no">02</span><span class="step-mark" aria-hidden="true">↗</span></div><h3>Teach it back</h3><p>Explain the idea in your own words, without leaning on the original phrasing.</p></article>
+          <article class="cycle-step"><div class="step-top"><span class="step-no">03</span><span class="step-mark" aria-hidden="true">?</span></div><h3>Find the gaps</h3><p>Notice jargon, vague wording, missing steps, and assumptions you cannot defend.</p></article>
+          <article class="cycle-step"><div class="step-top"><span class="step-no">04</span><span class="step-mark" aria-hidden="true">⌁</span></div><h3>Rebuild</h3><p>Return to one important gap and work through the missing idea carefully.</p></article>
+          <article class="cycle-step"><div class="step-top"><span class="step-no">05</span><span class="step-mark" aria-hidden="true">↻</span></div><h3>Explain again</h3><p>Reconstruct the explanation independently, with greater clarity and precision.</p></article>
+          <article class="cycle-step"><div class="step-top"><span class="step-no">06</span><span class="step-mark" aria-hidden="true">→</span></div><h3>Apply</h3><p>Use the idea in a new example and recognise where its limits begin.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap principle">
+        <div class="principle-index">A principle to keep / 03</div>
+        <blockquote>
+          <p>Recognition is not understanding. <em>Your explanation is the evidence.</em></p>
+          <cite>You may recognise a term, remember a definition, or follow an explanation while it is in front of you. The deeper test is whether you can reconstruct the idea in your own words—and notice what still does not make sense.</cite>
+          <div class="principle-aside">A useful question to return to: “Could I explain this without borrowing the sentence I just read?”</div>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="about" class="use-section">
+      <div class="wrap use-grid">
+        <div>
+          <div class="section-kicker">An open learning tool / 04</div>
+          <h2>Bring the method<br>to your <em>AI assistant.</em></h2>
+          <p class="use-copy"><strong>Feynman – The Learning Companion is an Agent Skill, not a standalone app.</strong> It is a portable set of instructions and supporting examples that compatible AI assistants can follow. It does not include its own AI model, chat interface, file-processing service, or learner database.</p>
+          <p class="use-copy">Reading PDFs, browsing webpages, transcribing videos, and interpreting images depend on the tools available in the AI assistant where you install it. The skill is designed to be transparent when a source cannot be accessed.</p>
+        </div>
+        <aside class="use-aside">
+          <p>Take the instructions with you. Keep the main skill file together with its references and examples.</p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/melvinvarghese/Feynman-Learning-Companion/archive/refs/heads/main.zip">Download the skill ↗</a>
+            <a class="button text-link" href="https://github.com/melvinvarghese/Feynman-Learning-Companion#install-the-skill">Installation guide ↗</a>
+          </div>
+          <p style="margin-top:22px;font-size:.75rem">Open source repository · Compatible Agent Skills environments</p>
+        </aside>
       </div>
     </section>
 
     <section id="faq">
-      <div class="wrap faq">
-        <h2>Frequently asked questions</h2>
-        <article class="faq-item">
-          <h3>What is the Feynman Technique?</h3>
-          <p>It is a learning approach built around explaining an idea in simple language, noticing where the explanation breaks down, returning to the missing knowledge, and explaining it again. The aim is understanding, not merely repeating a definition.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Does the assistant explain before asking questions?</h3>
-          <p>Yes. For a normal learning request, it first gives a beginner-friendly explanation and then invites the learner to teach it back. It can test first when the learner explicitly requests that.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Can I study from a PDF, book, webpage, video, or image?</h3>
-          <p>The skill supports learning from these materials when the host AI agent can access and interpret them. Video transcription, PDF extraction, webpage browsing, and image reading are capabilities of the host agent, not built into this instruction package.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Is Feynman Learning Companion a standalone app?</h3>
-          <p>No. It is a portable set of instructions for compatible AI agents. It does not include its own AI model, chat interface, file-processing service, or persistent learner database.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Where can I get the skill?</h3>
-          <p>The complete skill is available in the <a href="https://github.com/melvinvarghese/Feynman-Learning-Companion">public GitHub repository</a>. Download the repository and follow its installation instructions.</p>
-        </article>
+      <div class="wrap faq-layout">
+        <div>
+          <div class="section-kicker">A few clarifications / 05</div>
+          <h2>Questions, before you begin.</h2>
+          <p class="faq-intro">A little about the method, the material it can work with, and what this project actually provides.</p>
+        </div>
+        <div class="faq">
+          <details class="faq-item">
+            <summary>What is the Feynman Technique?</summary>
+            <div class="faq-answer"><p>It is a learning approach built around explaining an idea in simple language, noticing where the explanation breaks down, returning to the missing knowledge, and explaining it again. The aim is understanding, not merely repeating a definition.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Does the assistant explain before asking questions?</summary>
+            <div class="faq-answer"><p>Yes. For a normal learning request, it first gives a beginner-friendly explanation and then invites the learner to teach it back. It can test first when the learner explicitly requests that.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Can I study from a PDF, book, webpage, video, or image?</summary>
+            <div class="faq-answer"><p>The skill supports learning from these materials when the host AI agent can access and interpret them. Video transcription, PDF extraction, webpage browsing, and image reading are capabilities of the host agent, not built into this instruction package.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Is Feynman Learning Companion a standalone app?</summary>
+            <div class="faq-answer"><p>No. It is a portable set of instructions for compatible AI agents. It does not include its own AI model, chat interface, file-processing service, or persistent learner database.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Where can I get the skill?</summary>
+            <div class="faq-answer"><p>The complete skill is available in the <a href="https://github.com/melvinvarghese/Feynman-Learning-Companion">public GitHub repository</a>. Download the repository and follow its installation instructions.</p></div>
+          </details>
+        </div>
       </div>
     </section>
   </main>
   <footer>
     <div class="wrap">
-      <p><strong>Feynman – The Learning Companion</strong> · An AI agent skill for plain-language learning and teach-back.</p>
-      <p><a href="https://github.com/melvinvarghese/Feynman-Learning-Companion">GitHub repository</a> · <a href="llms.txt">LLM information</a> · <a href="sitemap.xml">Sitemap</a></p>
-      <p>Created by Melvin Varghese. The project does not claim affiliation with or endorsement by Richard Feynman or any AI provider.</p>
+      <div class="footer-row">
+        <div><div class="footer-brand">Feynman — The Learning Companion</div><div>An open practice in clear explanations and independent understanding.</div></div>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="https://github.com/melvinvarghese/Feynman-Learning-Companion">GitHub repository</a>
+          <a href="llms.txt">LLM information</a>
+          <a href="sitemap.xml">Sitemap</a>
+          <a href="robots.txt">Robots</a>
+        </nav>
+      </div>
+      <p class="footer-note">Created by Melvin Varghese. This project does not claim affiliation with or endorsement by Richard Feynman or any AI provider.</p>
     </div>
   </footer>
 </body>
+
 </html>
